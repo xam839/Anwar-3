@@ -1,0 +1,1712 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <title>AI Conference 2024</title>
+    <style>
+      @font-face {
+        font-family: "JanaLT";
+        src: url("assat/font/Janna-LT-Bold.ttf") format("woff2"),
+          url("assat/font/Janna-LT-Bold.tt") format("woff");
+        font-weight: bold;
+        font-style: normal;
+      }
+
+      /* Apply the font globally to the body */
+      body,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p,
+      a,
+      button,
+      input,
+      span,
+      div {
+        font-family: "JanaLT", Arial, sans-serif;
+        font-weight: bold;
+      }
+      /* General text */
+      body {
+        font-weight: bold; /* Use the bold version */
+      }
+
+      /* For headings */
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-weight: bold; /* Ensure headings are bold */
+      }
+
+      /* For buttons */
+      button {
+        font-weight: bold; /* Ensure buttons are bold */
+      }
+
+      /* For links */
+      a {
+        font-weight: bold; /* Make links bold */
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        background: url("assat/imega/gradient\ b.b.jpg") no-repeat no-repeat
+          center center fixed;
+        background-size: cover;
+        color: #fff;
+        text-align: center;
+        direction: ltr;
+        overflow-x: hidden;
+      }
+
+      /* Navbar container styling */
+      /* Navbar container styling */
+      .navbar {
+        display: flex;
+        justify-content: center;
+        margin: 20px 0;
+        gap: 30px; /* Reduce gap since we're adding a separator */
+      }
+
+      /* Navbar link styling */
+      .navbar a {
+        text-decoration: none;
+        color: white; /* Initial text color */
+        font-size: 25px;
+        padding: 10px 20px; /* Optional: Add padding */
+        position: relative;
+        transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+      }
+
+      /* Add the separator (|) between the links */
+      .navbar a:not(:last-child)::after {
+        content: "|"; /* Add the pipe symbol */
+        position: absolute;
+        right: -20px; /* Adjust space for the separator */
+        color: white; /* Same color as the text */
+      }
+
+      /* Hover effect for navbar links */
+      .navbar a:hover {
+        background-color: #bc8859; /* Change background color on hover */
+        color: rgb(255, 255, 255); /* Change text color to black on hover */
+        border-radius: 15px; /* Optional: Add a slight border-radius */
+      }
+
+      /* Adjust the separator spacing on smaller screens */
+      @media (max-width: 768px) {
+        .navbar {
+          gap: 15px; /* Adjust gap between links for smaller screens */
+        }
+
+        .navbar a:not(:last-child)::after {
+          right: -10px; /* Adjust separator position on smaller screens */
+        }
+      }
+
+      .navbar.arabic-nav a {
+        order: -1; /* This will reverse the order of the links */
+      }
+
+      .logo {
+        margin-top: 50px;
+      }
+
+      .card {
+        background-color: rgba(255, 255, 255, 0.1);
+        margin: 20px auto;
+        padding: 20px;
+        max-width: 800px;
+        border-radius: 10px;
+      }
+
+      .section-2 {
+        display: flex;
+        justify-content: center;
+        padding: 50px 0;
+      }
+
+      .content-wrapper {
+        display: flex;
+        align-items: center;
+        max-width: 1200px;
+        width: 100%;
+        padding: 20px;
+      }
+
+      .text-content {
+        flex: 1;
+        padding-right: 20px;
+        text-align: left;
+      }
+
+      .text-content h1 {
+        color: white;
+        font-size: 24px;
+      }
+
+      .text-content p {
+        color: #fff;
+        margin-top: 10px;
+        margin-bottom: 28px;
+        text-align: justify;
+      }
+
+      .text-content button {
+        padding: 10px 20px;
+        background-color: #bc8859;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .image-content {
+        flex: 1;
+      }
+
+      .right-image {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+      }
+
+      .section-5 {
+        padding: 50px 0;
+        text-align: left;
+      }
+
+      .section-5 h2 {
+        margin-bottom: 40px;
+        color: white;
+      }
+
+      .card-item {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        padding: 20px;
+        width: 250px;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .card-image {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 10px 10px 0 0;
+      }
+
+      .card-item h3 {
+        color: white;
+        margin: 15px 0;
+      }
+
+      .card-item p {
+        color: #ccc;
+      }
+
+      .section-6 {
+        padding: 50px 0;
+        text-align: center;
+        background: rgba(255, 255, 255, 0.1);
+      }
+
+      .section-6 h2 {
+        margin-bottom: 30px;
+        color: white;
+      }
+
+      .ad-reservation {
+        display: inline-block;
+        width: 80%;
+        padding: 40px;
+        background: rgba(255, 255, 255, 0.2);
+        border: 2px dashed white;
+        border-radius: 10px;
+        color: white;
+        cursor: pointer;
+      }
+
+      .ad-reservation:hover {
+        background: rgba(255, 255, 255, 0.3);
+      }
+
+      .timeline {
+        position: relative;
+        margin: 50px 0;
+        width: 100%;
+      }
+
+      .timeline-item {
+        padding: 10px 40px;
+        position: relative;
+        background-color: inherit;
+        width: 50%;
+      }
+
+      .timeline-item.left {
+        left: 0;
+      }
+
+      .timeline-item.right {
+        left: 50%;
+      }
+
+      .timeline::after {
+        content: "";
+        position: absolute;
+        width: 6px;
+        background-color: white;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        margin-left: -3px;
+      }
+
+      .timeline-item.left::before,
+      .timeline-item.right::before {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background-color: white;
+        border: 4px solid #007bff;
+        top: 15px;
+        border-radius: 50%;
+        z-index: 1;
+      }
+
+      .timeline-item.left::before {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .timeline-item.right::before {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .timeline-item.left::after,
+      .timeline-item.right::after {
+        content: none; /* Remove arrows */
+      }
+
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      h1 {
+        text-align: center;
+      }
+      ul {
+        --col-gap: 4rem;
+        --row-gap: 4rem;
+        --line-w: 0.25rem;
+        display: grid;
+        grid-template-columns: var(--line-w) 1fr;
+        grid-auto-columns: max-content;
+        column-gap: var(--col-gap);
+        list-style: none;
+        width: min(60rem, 90%);
+        margin-inline: auto;
+      }
+
+      /* line */
+      ul::before {
+        content: "";
+        grid-column: 1;
+        grid-row: 1 / span 20;
+        background: rgb(225, 225, 225);
+        border-radius: calc(var(--line-w) / 2);
+      }
+
+      /* columns*/
+
+      /* row gaps */
+      ul li:not(:last-child) {
+        margin-bottom: var(--row-gap);
+      }
+
+      /* card */
+      ul li {
+        grid-column: 2;
+        --inlineP: 1.5rem;
+        margin-inline: var(--inlineP);
+        grid-row: span 2;
+        display: grid;
+        grid-template-rows: min-content min-content min-content;
+        align-self: start;
+      }
+
+      /* date */
+      ul li .date {
+        --dateH: 3rem;
+        height: var(--dateH);
+        margin-inline: calc(var(--inlineP) * -1);
+
+        text-align: center;
+        background-color: var(--accent-color);
+
+        color: rgb(8, 8, 8);
+        font-size: 1.25rem;
+        font-weight: 700;
+
+        display: grid;
+        place-content: center;
+        position: relative;
+
+        border-radius: calc(var(--dateH) / 2) 0 0 calc(var(--dateH) / 2);
+      }
+
+      /* date flap */
+      ul li .date::before {
+        content: "";
+        width: var(--inlineP);
+        aspect-ratio: 1;
+        background: var(--accent-color);
+        background-image: linear-gradient(rgba(0, 0, 0, 0.2) 100%, transparent);
+        position: absolute;
+        top: 100%;
+
+        clip-path: polygon(0 0, 100% 0, 0 100%);
+
+        right: 0;
+      }
+
+      /* title descr */
+      ul li .title,
+      ul li .descr {
+        background: var(--bgColor);
+        position: relative;
+        padding-inline: 1.5rem;
+      }
+      ul li .title {
+        overflow: hidden;
+        padding-block-start: 1.5rem;
+        padding-block-end: 1rem;
+        font-weight: 500;
+      }
+      ul li .descr {
+        padding-block-end: 1.5rem;
+        font-weight: 300;
+      }
+
+      /* shadows */
+      ul li .title::before,
+      ul li .descr::before {
+        content: "";
+        position: absolute;
+        width: 90%;
+        height: 0.5rem;
+        background: rgba(0, 0, 0, 0.5);
+        left: 50%;
+        border-radius: 50%;
+        filter: blur(4px);
+        transform: translate(-50%, 50%);
+      }
+      ul li .title::before {
+        bottom: calc(100% + 0.125rem);
+      }
+
+      ul li .descr::before {
+        z-index: -1;
+        bottom: 0.25rem;
+      }
+
+      @media (min-width: 40rem) {
+        ul {
+          grid-template-columns: 1fr var(--line-w) 1fr;
+        }
+        ul::before {
+          grid-column: 2;
+        }
+        ul li:nth-child(odd) {
+          grid-column: 1;
+        }
+        ul li:nth-child(even) {
+          grid-column: 3;
+        }
+
+        /* start second card */
+        ul li:nth-child(2) {
+          grid-row: 2/4;
+        }
+
+        ul li:nth-child(odd) .date::before {
+          clip-path: polygon(0 0, 100% 0, 100% 100%);
+          left: 0;
+        }
+
+        ul li:nth-child(odd) .date::after {
+          transform: translate(-50%, -50%);
+          left: calc(100% + var(--col-gap) + var(--line-w) / 2);
+        }
+        ul li:nth-child(odd) .date {
+          border-radius: 0 calc(var(--dateH) / 2) calc(var(--dateH) / 2) 0;
+        }
+      }
+
+      .credits {
+        margin-top: 1rem;
+        text-align: right;
+      }
+      .credits a {
+        color: var(--color);
+      }
+
+      /*end  for time line  */
+
+      /* start Countdown Timer */
+      .countdown {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 40px 0;
+        font-size: 1.8rem;
+        color: #fcfcfc;
+        letter-spacing: 0.1rem;
+      }
+
+      .time {
+        margin: 0 15px;
+        text-align: center;
+      }
+
+      .time span {
+        display: block;
+        font-size: 3rem;
+        color: #fcfcfc;
+      }
+
+      /* end Countdown Timer */
+
+      /* Start Solution Card Styling */
+      .solution_cards_box {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .solution_card {
+        flex: 0 1 calc(33.333% - 20px);
+        background-color: rgba(255, 255, 255, 0.377); /* خلفية شفافة جزئيًا */
+        border-radius: 15px; /* زوايا منحنية */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* إضافة ظل خفيف */
+        padding: 20px;
+        transition: 0.3s;
+        margin: 8px;
+        padding: 10px 15px;
+        position: relative;
+        z-index: 1;
+        overflow: hidden; /* Ensure overflow is visible */
+        transition: 0.7s;
+        min-height: 300px;
+      }
+
+      /* For third card - Example */
+      /* For third card - Example */
+      .solution_card:nth-child(1) .solu_description ol {
+        list-style-position: inside;
+        text-align: right; /* Align text to the right */
+        color: #ffffff;
+        font-size: 34px;
+        text-transform: uppercase;
+        text-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
+        direction: rtl; /* This makes the numbers appear on the right */
+      }
+
+      .solution_card:nth-child(1) .solu_description ol li {
+        margin-bottom: 14px; /* Add space between list items */
+        font-size: 16px;
+        color: #fdfdfd;
+        direction: rtl; /* Ensure text and numbers flow in RTL */
+        text-align: right; /* Align text to the right */
+      }
+
+      /* Hover Effects */
+      .solution_card:hover {
+        background: #bc8859;
+        color: #ffffff;
+        transform: scale(1);
+        z-index: 2;
+      }
+
+      /* Solution Card Title */
+      .solution_card .solu_title h3 {
+        color: #ffffff;
+        font-size: 1.3rem;
+        margin-top: 13px;
+        margin-bottom: 13px;
+      }
+
+      /* Solution Card Description */
+      .solution_card .solu_description p {
+        font-size: 22px;
+        margin-top: 15px;
+        color: #fdfdfd; /* Ensure text color is visible */
+      }
+
+      /* Hover Bubble Effect */
+      .hover_color_bubble {
+        position: absolute;
+        background: rgba(54, 81, 207, 0.15);
+        width: 100rem;
+        height: 100rem;
+        left: 0;
+        right: 0;
+        z-index: -1;
+        top: 16rem;
+        border-radius: 50%;
+        transform: rotate(-36deg);
+        left: -18rem;
+        transition: 0.7s;
+      }
+
+      /* Hover Effect for Bubble */
+      .solution_card:hover .hover_color_bubble {
+        top: 0rem;
+      }
+
+      /* Responsive Adjustments */
+      @media (max-width: 768px) {
+        .solution_card {
+          flex: 1 1 100%;
+        }
+      }
+
+      /* END  card Solution  */
+
+      /* Ensure all cards have the same height */
+
+      .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 640px;
+        background-color: rgba(255, 255, 255, 0.1); /* خلفية شفافة جزئيًا */
+        border-radius: 15px; /* زوايا منحنية */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* إضافة ظل خفيف */
+        padding: 20px;
+        transition: 0.3s;
+        backdrop-filter: blur(10px); /* تأثير الضبابية */
+      }
+      .card:hover {
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* تكبير الظل عند التمرير */
+      }
+      /* Ensure card content is distributed evenly */
+      .card-body {
+        flex-grow: 1; /* Allows the body to grow and fill space */
+        display: flex;
+        flex-direction: column;
+        /* Even spacing between title, text, and image */
+      }
+
+      .card-title {
+        text-align: left;
+        font-size: 25px; /* Adjust the font size */
+        color: #4a4947;
+      }
+
+      .card-text {
+        text-align: justify; /* Justify the paragraph text */
+        font-size: 17px; /* Adjust font size */
+        line-height: 1.6; /* Improve readability */
+        text-align: left; /* Align the title to the right */
+        color: #fff;
+      }
+
+      /* Flexbox ensures all cards stretch to equal height */
+      .swiper-slide {
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        padding: 10px;
+      }
+
+      /* Remove any unwanted margins */
+      h4,
+      p {
+        margin: 0; /* Reset margins to prevent additional spacing */
+      }
+
+      .swiper-button-next,
+      .swiper-button-prev {
+        color: #000; /* Change this to the color you want */
+      }
+
+      /* Adjust Swiper container */
+      .swiper-container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding-top: 50px;
+        position: relative;
+      }
+
+      /* Adjust the Swiper navigation buttons */
+      .swiper-button-next,
+      .swiper-button-prev {
+        color: white; /* Ensure the arrows are visible */
+        width: 50px;
+        height: 50px;
+        background-color: rgba(
+          0,
+          0,
+          0,
+          0.5
+        ); /* Add a background for visibility */
+        border-radius: 50%; /* Make them circular */
+        position: absolute;
+        top: 50%; /* Center them vertically */
+        transform: translateY(-50%); /* Offset the vertical position */
+        z-index: 10; /* Ensure they appear above the content */
+      }
+
+      /* Positioning next and previous buttons */
+      .swiper-button-next {
+        right: 10px; /* Align the next button to the right */
+      }
+
+      .swiper-button-prev {
+        left: 10px; /* Align the previous button to the left */
+      }
+
+      /* Adjust Swiper slides for better visibility */
+      .swiper-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+      * {
+        box-sizing: border-box;
+      }
+
+      footer {
+        background-color: rgba(255, 255, 255, 0.1); /* خلفية شفافة جزئيًا */
+        border-radius: 15px; /* زوايا منحنية */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* إضافة ظل خفيف */
+        padding: 20px;
+        transition: 0.3s;
+        color: white; /* White text color */
+        text-align: center; /* Align text to the right */
+        padding: 20px 0; /* Padding for top and bottom */
+        font-size: 24px; /* Adjust font size */
+      }
+
+      footer a {
+        color: #ffffff; /* White color for links */
+        text-decoration: none; /* Remove underline from links */
+      }
+
+      footer a:hover {
+        text-decoration: underline; /* Underline links on hover */
+      }
+
+      .footer-content p {
+        margin: 0; /* Remove margins to keep everything in one line */
+        white-space: nowrap; /* Ensure the text stays on one line */
+      }
+
+      /* General Modal Styles */
+      .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 100; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        background-color: rgba(
+          0,
+          0,
+          0,
+          0.5
+        ); /* Black background with opacity */
+      }
+
+      /* Modal Content Box */
+      .modal-content {
+        background-color: rgba(255, 255, 255, 0.9);
+        margin: 10% auto; /* 10% from the top and centered */
+        padding: 20px;
+        border-radius: 10px;
+        width: 40%; /* Adjust this based on your preference */
+        max-width: 600px; /* Ensure it’s responsive */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(10px); /* Match the site style */
+        text-align: center; /* Center the text */
+      }
+
+      /* Close Button */
+      .close {
+        color: black;
+        float: right;
+        font-size: 30px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .close:hover,
+      .close:focus {
+        color: red;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      /* Form Styling */
+      .modal-content h2 {
+        color: #bc8859; /* Match the site style */
+      }
+
+      label {
+        display: block;
+        margin: 15px 0 5px;
+        font-size: 18px;
+        color: #333;
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+      }
+
+      input:read-only {
+        background-color: #f0f0f0; /* Non-editable field style */
+      }
+
+      textarea {
+        resize: vertical;
+        height: 100px; /* Adjust the height */
+      }
+
+      /* Submit Button */
+      button {
+        background-color: #bc8859; /* Match button to your site color */
+        color: black;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      button:hover {
+        background-color: #d69f72;
+      }
+
+      /* Adjust modal for small screens */
+      @media (max-width: 768px) {
+        .modal-content {
+          width: 80%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Conference Logo -->
+    <div class="logo">
+      <img src="assat/imega/white.png" alt="Conference Logo" width="300" />
+    </div>
+
+    <div class="navbar" id="navbar">
+      <a href="#" id="nav-main">Main</a>
+      <a href="#" id="nav-about">About the Conference</a>
+      <a href="#" id="nav-goals">Conference Goals</a>
+      <a href="#" id="nav-axes">Axes</a>
+      <a href="#" id="nav-main" onclick="openPopup()">Communication</a>
+      <a href="index-A.html" id="nav-contact">AR</a>
+    </div>
+
+    <!-- Popup Modal -->
+    <div id="contactModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closePopup()">&times;</span>
+        <h2>Contact the Conference</h2>
+        <form id="contactForm">
+          <!-- Conference Email (Non-editable) -->
+          <label for="conferenceEmail">Conference Email</label>
+          <input
+            type="email"
+            id="conferenceEmail"
+            value="eduai@uhb.edu.sa"
+            readonly
+          />
+
+          <!-- User Email -->
+          <label for="userEmail">Your Email</label>
+          <input
+            type="email"
+            id="userEmail"
+            placeholder="Enter your email"
+            required
+          />
+
+          <!-- Problem Box -->
+          <label for="problemDescription">Problem Description</label>
+          <textarea
+            id="problemDescription"
+            placeholder="Describe your problem here..."
+            required
+          ></textarea>
+
+          <!-- Submit Button -->
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Countdown Timer Section -->
+    <!-- Countdown Timer Section -->
+    <div id="countdown" class="countdown">
+      <div class="time">
+        <span id="months">00</span>
+        <div>Month</div>
+      </div>
+      <div class="time">
+        <span id="days">00</span>
+        <div>Day</div>
+      </div>
+      <div class="time">
+        <span id="hours">00</span>
+        <div>Hour</div>
+      </div>
+      <div class="time">
+        <span id="minutes">00</span>
+        <div>Minute</div>
+      </div>
+      <div class="time">
+        <span id="seconds">00</span>
+        <div>Second</div>
+      </div>
+    </div>
+
+    <!-- Section 2: Image on Right and Text on Left -->
+    <div class="section-2">
+      <div class="content-wrapper">
+        <div class="text-content">
+          <h1 id="section-title">introduction</h1>
+          <p id="section-text">
+            Today, the world is witnessing a major revolution in the field of
+            artificial intelligence in various economic, political, cultural and
+            educational fields. Artificial intelligence is classified as one of
+            the modern technologies capable of creating new content and new
+            ideas and performing complex tasks that in the past required human
+            intervention. It also plays a major role in the field of education,
+            teaching, applications and various educational platforms, including
+            the ability to develop and modernize the education system, practices
+            used in the field of education, allocating appropriate teaching
+            methods, developing educational platforms, improving the student
+            learning experience, creating teaching and evaluation plans, data
+            analysis, learning effectiveness and enhancement, and other options.
+            The conference on foreseeing the future of education in the era of
+            artificial intelligence at the University of Hafr Al-Batin comes at
+            a time when artificial intelligence has begun to occupy a great
+            place and interest in the field of education. This conference is
+            also in line with the Kingdom of Saudi Arabia's Vision 2030, which
+            seeks to achieve development and progress in several sectors,
+            including the education sector, which is considered a basic and
+            important tributary of development in the Kingdom of Saudi Arabia.
+          </p>
+          <button id="read-more">Register at the Conference</button>
+        </div>
+        <div class="image-content">
+          <img
+            src="assat/imega/image-136053-digital-transformation-technical-progress-gestures-integr-preview-transformed_upscayl_4x_ultrasharp.png"
+            alt="AI Image"
+            class="right-image"
+          />
+        </div>
+      </div>
+    </div>
+
+    <br /><br /><br /><br /><br />
+
+    <div class="solution_cards_box">
+      <div class="solution_card">
+        <div class="hover_color_bubble"></div>
+        <div class="so_top_icon">
+          <svg
+            id="Layer_1"
+            enable-background="new 0 0 512 512"
+            height="50"
+            viewBox="0 0 512 512"
+            width="40"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g>
+              <g>
+                <g>
+                  <g>
+                    <path
+                      d="m47.478 452.317 295.441 19.76c5.511.369 10.277-3.8 10.645-9.31l28.393-424.517c.369-5.511-3.8-10.276-9.31-10.645l-295.441-19.76c-5.511-.369-10.276 3.8-10.645 9.31l-28.394 424.517c-.368 5.511 3.8 10.277 9.311 10.645z"
+                      fill="#fae19e"
+                    />
+                  </g>
+                  <g>
+                    <g>
+                      <g>
+                        <g>
+                          <g>
+                            <path
+                              d="m17.5 504.177h226.14l79.96-79.605v-355.86c0-5.523-4.477-10-10-10h-296.1c-5.523 0-10 4.477-10 10v425.466c0 5.522 4.477 9.999 10 9.999z"
+                              fill="#fff9e9"
+                            />
+                          </g>
+                          <path
+                            d="m313.601 58.712h-40c5.523 0 10 4.477 10 10v355.861l-.258 40.078 40.258-40.078v-355.861c0-5.523-4.477-10-10-10z"
+                            fill="#fff4d6"
+                          />
+                        </g>
+                      </g>
+                    </g>
+                    <path
+                      d="m243.64 504.177v-70.253c0-5.523 4.477-10 10-10h69.96z"
+                      fill="#ffeec2"
+                    />
+                  </g>
+                </g>
+                <g>
+                  <path
+                    d="m468.636 248.58-33.372.165v-50.826c0-9.183 7.463-16.662 16.673-16.708h.007c9.217-.046 16.693 7.371 16.693 16.562v50.807z"
+                    fill="#fed23a"
+                  />
+                  <path
+                    d="m451.96 504.177c-10.362-10.277-16.196-24.263-16.208-38.857l-.062-73.973c0-.644.524-1.169 1.171-1.173l30.038-.149c.647-.003 1.171.517 1.171 1.161l.062 74.079c.012 14.531-5.749 28.472-16.015 38.756z"
+                    fill="#54b1ff"
+                  />
+                  <path
+                    d="m451.959 469.333h-.01c-14.434.072-26.14-11.542-26.14-25.935v-213.527c0-6.778 5.477-12.283 12.255-12.316l27.626-.137c6.826-.034 12.378 5.49 12.378 12.316v213.436c0 14.38-11.687 26.091-26.109 26.163z"
+                    fill="#fdf385"
+                  />
+                  <path
+                    d="m465.69 217.417-23.769.118c6.037.79 10.708 5.94 10.708 12.198v213.437c0 9.823-5.455 18.397-13.507 22.87 3.79 2.115 8.164 3.317 12.826 3.293h.01c14.422-.072 26.109-11.783 26.109-26.163v-213.436c.001-6.826-5.551-12.351-12.377-12.317z"
+                    fill="#faee6e"
+                  />
+                  <path
+                    d="m491.274 247.925-71.615.355c-7.305.036-13.226 5.968-13.226 13.248 0 7.281 5.921 13.153 13.226 13.117l58.389-.29v77.489c0 7.281 5.921 13.153 13.226 13.117 7.305-.036 13.226-5.968 13.226-13.248v-90.672c0-7.28-5.922-13.152-13.226-13.116z"
+                    fill="#54b1ff"
+                  />
+                  <g>
+                    <path
+                      d="m491.274 247.925-38.441.188-.167 26.311 25.381-.067v77.489c0 7.281 5.921 13.153 13.226 13.117 7.305-.036 13.226-5.968 13.226-13.248v-90.672c.001-7.282-5.921-13.154-13.225-13.118z"
+                      fill="#3da7ff"
+                    />
+                  </g>
+                </g>
+              </g>
+              <g fill="#060606">
+                <path
+                  d="m373.147 20.122-295.44-19.761c-9.631-.638-17.984 6.665-18.629 16.293l-2.311 34.557h-39.267c-9.649 0-17.5 7.851-17.5 17.5v425.466c0 9.649 7.851 17.5 17.5 17.5h226.141c1.96 0 3.902-.801 5.292-2.185l34.138-33.987c.347.074.701.133 1.065.157l58.282 3.898c9.302.614 18.005-6.952 18.629-16.293l28.393-424.515c.639-9.528-6.766-17.993-16.293-18.63zm-122.006 465.902v-52.1c0-1.378 1.122-2.5 2.5-2.5h51.9zm94.939-23.757c-.244 1.51-1.131 2.286-2.66 2.327l-46.28-3.096 31.752-31.611c1.414-1.407 2.209-3.32 2.209-5.315v-355.86c0-9.649-7.851-17.5-17.5-17.5h-77.993c-9.697 0-9.697 15 0 15h77.993c1.379 0 2.5 1.122 2.5 2.5v347.712h-62.46c-9.649 0-17.5 7.851-17.5 17.5v62.753h-218.641c-1.378 0-2.5-1.122-2.5-2.5v-425.465c0-1.378 1.122-2.5 2.5-2.5h178.168c9.697 0 9.697-15 0-15h-123.868l2.244-33.556c.244-1.511 1.131-2.286 2.661-2.327l295.44 19.76c1.511.244 2.287 1.131 2.328 2.661z"
+                />
+                <path
+                  d="m267.827 237.047h-204.553c-4.142 0-7.5 3.358-7.5 7.5s3.358 7.5 7.5 7.5h204.553c4.143 0 7.5-3.358 7.5-7.5s-3.357-7.5-7.5-7.5z"
+                />
+                <path
+                  d="m267.827 289.332h-204.553c-4.142 0-7.5 3.358-7.5 7.5s3.358 7.5 7.5 7.5h204.553c4.143 0 7.5-3.358 7.5-7.5s-3.357-7.5-7.5-7.5z"
+                />
+                <path
+                  d="m55.774 192.262c0 4.142 3.358 7.5 7.5 7.5h204.553c4.143 0 7.5-3.358 7.5-7.5s-3.357-7.5-7.5-7.5h-204.553c-4.142 0-7.5 3.358-7.5 7.5z"
+                />
+                <path
+                  d="m91.807 139.977c0 4.142 3.358 7.5 7.5 7.5h132.487c4.142 0 7.5-3.358 7.5-7.5s-3.358-7.5-7.5-7.5h-132.487c-4.142 0-7.5 3.358-7.5 7.5z"
+                />
+                <path
+                  d="m194.755 438.787c-13.489.036-26.978.065-40.467.086-4.534.007-9.067.013-13.6.016-8.215.006-13.75-1.643-15.59-10.679-1.556-7.64-12.364-6.613-14.464 0-5.19 16.337-13.774 9.936-18.582-1.053-4.797-10.963-6.027-23.233-8.122-34.9-1.54-8.573-14.506-6.17-14.732 1.994-.298 10.751-1.302 21.331-4.031 31.758-2.815 10.758-7.034 21.097-11.222 31.376-3.651 8.961 10.867 12.816 14.464 3.988 3.711-9.108 7.427-18.266 10.193-27.714 5.14 12.36 15.774 26.34 30.927 18.101 2.819-1.533 5.452-3.712 7.763-6.253 7.88 9.106 19.609 8.388 30.584 8.375 15.627-.02 31.254-.054 46.881-.095 9.649-.025 9.667-15.025-.002-15z"
+                />
+                <path
+                  d="m505.932 246.439c-3.897-3.878-9.255-5.867-14.695-6.014l-5.668.028v-10.719c0-6.529-3.878-13.427-9.433-16.862v-15.098c0-31.069-48.372-30.934-48.372.146v15.1c-5.659 3.498-9.455 9.741-9.455 16.852v10.982c-24.966 1.7-25.037 39.745.028 41.232.16 33.575.152 66.6-.028 100.737-.049 9.414 14.949 9.966 15 .079.18-34.166.188-67.22.029-100.823l37.211-.185s-.048 110.848-.048 160.784c0 24.338-37.219 24.5-37.219-.253l.013-13.677c.585-9.68-14.387-10.583-14.973-.904v12.834c0 11 3.402 20.316 9.988 26.869.586 15.693 7.198 30.878 18.369 41.956 3.205 3.18 7.642 2.208 10.744-.182 11.365-11.385 17.769-26.394 18.169-42.414 4.951-4.931 9.908-9.896 9.908-26.896l.006-68.351c12.97 3.689 26.494-6.348 26.494-19.946v-90.672c0-5.523-2.155-10.709-6.068-14.603zm-72.623-5.727v-10.841c0-2.219 1.523-4.08 3.573-4.633l30.025-.149c.84.208 1.615.605 2.243 1.231.915.911 1.419 2.123 1.419 3.414v10.794zm18.671-52c4.604 0 9.155 4.514 9.155 9.062v12.166l-18.372.091v-12.111c.001-5.053 4.133-9.183 9.217-9.208zm-.011 303.901c-3.487-4.942-6.009-10.531-7.417-16.406 2.322.503 4.674.765 7.027.765 2.627 0 5.253-.326 7.839-.957-1.374 5.964-3.892 11.587-7.449 16.598zm45.031-140.899c0 7.101-11.452 7.66-11.452.131 0 0 .013-70.974.021-77.48.005-4.196-3.483-7.509-7.558-7.509l-58.389.29c-7.242 0-7.073-11.331.074-11.366l71.615-.355c3.463.295 5.359 2.168 5.688 5.617v90.672z"
+                />
+              </g>
+            </g>
+          </svg>
+        </div>
+        <div class="solu_title">
+          <h1>Vision</h1>
+        </div>
+        <div class="solu_description">
+          <p>
+            The conference will be a scientific event that contributes to
+            disseminating the most prominent contributions in the field of
+            artificial intelligence and education.
+          </p>
+        </div>
+      </div>
+
+      <div class="solution_card">
+        <div class="hover_color_bubble"></div>
+        <div class="so_top_icon">
+          <!-- SVG for Message -->
+          <svg
+            id="Layer_1"
+            enable-background="new 0 0 512 512"
+            height="50"
+            viewBox="0 0 512 512"
+            width="40"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g>
+              <g>
+                <g>
+                  <g>
+                    <path
+                      d="m47.478 452.317 295.441 19.76c5.511.369 10.277-3.8 10.645-9.31l28.393-424.517c.369-5.511-3.8-10.276-9.31-10.645l-295.441-19.76c-5.511-.369-10.276 3.8-10.645 9.31l-28.394 424.517c-.368 5.511 3.8 10.277 9.311 10.645z"
+                      fill="#fae19e"
+                    />
+                  </g>
+                  <g>
+                    <g>
+                      <g>
+                        <g>
+                          <g>
+                            <path
+                              d="m17.5 504.177h226.14l79.96-79.605v-355.86c0-5.523-4.477-10-10-10h-296.1c-5.523 0-10 4.477-10 10v425.466c0 5.522 4.477 9.999 10 9.999z"
+                              fill="#fff9e9"
+                            />
+                          </g>
+                          <path
+                            d="m313.601 58.712h-40c5.523 0 10 4.477 10 10v355.861l-.258 40.078 40.258-40.078v-355.861c0-5.523-4.477-10-10-10z"
+                            fill="#fff4d6"
+                          />
+                        </g>
+                      </g>
+                    </g>
+                    <path
+                      d="m243.64 504.177v-70.253c0-5.523 4.477-10 10-10h69.96z"
+                      fill="#ffeec2"
+                    />
+                  </g>
+                </g>
+                <g>
+                  <path
+                    d="m468.636 248.58-33.372.165v-50.826c0-9.183 7.463-16.662 16.673-16.708h.007c9.217-.046 16.693 7.371 16.693 16.562v50.807z"
+                    fill="#fed23a"
+                  />
+                  <path
+                    d="m451.96 504.177c-10.362-10.277-16.196-24.263-16.208-38.857l-.062-73.973c0-.644.524-1.169 1.171-1.173l30.038-.149c.647-.003 1.171.517 1.171 1.161l.062 74.079c.012 14.531-5.749 28.472-16.015 38.756z"
+                    fill="#54b1ff"
+                  />
+                  <path
+                    d="m451.959 469.333h-.01c-14.434.072-26.14-11.542-26.14-25.935v-213.527c0-6.778 5.477-12.283 12.255-12.316l27.626-.137c6.826-.034 12.378 5.49 12.378 12.316v213.436c0 14.38-11.687 26.091-26.109 26.163z"
+                    fill="#fdf385"
+                  />
+                  <path
+                    d="m465.69 217.417-23.769.118c6.037.79 10.708 5.94 10.708 12.198v213.437c0 9.823-5.455 18.397-13.507 22.87 3.79 2.115 8.164 3.317 12.826 3.293h.01c14.422-.072 26.109-11.783 26.109-26.163v-213.436c.001-6.826-5.551-12.351-12.377-12.317z"
+                    fill="#faee6e"
+                  />
+                  <path
+                    d="m491.274 247.925-71.615.355c-7.305.036-13.226 5.968-13.226 13.248 0 7.281 5.921 13.153 13.226 13.117l58.389-.29v77.489c0 7.281 5.921 13.153 13.226 13.117 7.305-.036 13.226-5.968 13.226-13.248v-90.672c0-7.28-5.922-13.152-13.226-13.116z"
+                    fill="#54b1ff"
+                  />
+                  <g>
+                    <path
+                      d="m491.274 247.925-38.441.188-.167 26.311 25.381-.067v77.489c0 7.281 5.921 13.153 13.226 13.117 7.305-.036 13.226-5.968 13.226-13.248v-90.672c.001-7.282-5.921-13.154-13.225-13.118z"
+                      fill="#3da7ff"
+                    />
+                  </g>
+                </g>
+              </g>
+              <g fill="#060606">
+                <path
+                  d="m373.147 20.122-295.44-19.761c-9.631-.638-17.984 6.665-18.629 16.293l-2.311 34.557h-39.267c-9.649 0-17.5 7.851-17.5 17.5v425.466c0 9.649 7.851 17.5 17.5 17.5h226.141c1.96 0 3.902-.801 5.292-2.185l34.138-33.987c.347.074.701.133 1.065.157l58.282 3.898c9.302.614 18.005-6.952 18.629-16.293l28.393-424.515c.639-9.528-6.766-17.993-16.293-18.63zm-122.006 465.902v-52.1c0-1.378 1.122-2.5 2.5-2.5h51.9zm94.939-23.757c-.244 1.51-1.131 2.286-2.66 2.327l-46.28-3.096 31.752-31.611c1.414-1.407 2.209-3.32 2.209-5.315v-355.86c0-9.649-7.851-17.5-17.5-17.5h-77.993c-9.697 0-9.697 15 0 15h77.993c1.379 0 2.5 1.122 2.5 2.5v347.712h-62.46c-9.649 0-17.5 7.851-17.5 17.5v62.753h-218.641c-1.378 0-2.5-1.122-2.5-2.5v-425.465c0-1.378 1.122-2.5 2.5-2.5h178.168c9.697 0 9.697-15 0-15h-123.868l2.244-33.556c.244-1.511 1.131-2.286 2.661-2.327l295.44 19.76c1.511.244 2.287 1.131 2.328 2.661z"
+                />
+                <path
+                  d="m267.827 237.047h-204.553c-4.142 0-7.5 3.358-7.5 7.5s3.358 7.5 7.5 7.5h204.553c4.143 0 7.5-3.358 7.5-7.5s-3.357-7.5-7.5-7.5z"
+                />
+                <path
+                  d="m267.827 289.332h-204.553c-4.142 0-7.5 3.358-7.5 7.5s3.358 7.5 7.5 7.5h204.553c4.143 0 7.5-3.358 7.5-7.5s-3.357-7.5-7.5-7.5z"
+                />
+                <path
+                  d="m55.774 192.262c0 4.142 3.358 7.5 7.5 7.5h204.553c4.143 0 7.5-3.358 7.5-7.5s-3.357-7.5-7.5-7.5h-204.553c-4.142 0-7.5 3.358-7.5 7.5z"
+                />
+                <path
+                  d="m91.807 139.977c0 4.142 3.358 7.5 7.5 7.5h132.487c4.142 0 7.5-3.358 7.5-7.5s-3.358-7.5-7.5-7.5h-132.487c-4.142 0-7.5 3.358-7.5 7.5z"
+                />
+                <path
+                  d="m194.755 438.787c-13.489.036-26.978.065-40.467.086-4.534.007-9.067.013-13.6.016-8.215.006-13.75-1.643-15.59-10.679-1.556-7.64-12.364-6.613-14.464 0-5.19 16.337-13.774 9.936-18.582-1.053-4.797-10.963-6.027-23.233-8.122-34.9-1.54-8.573-14.506-6.17-14.732 1.994-.298 10.751-1.302 21.331-4.031 31.758-2.815 10.758-7.034 21.097-11.222 31.376-3.651 8.961 10.867 12.816 14.464 3.988 3.711-9.108 7.427-18.266 10.193-27.714 5.14 12.36 15.774 26.34 30.927 18.101 2.819-1.533 5.452-3.712 7.763-6.253 7.88 9.106 19.609 8.388 30.584 8.375 15.627-.02 31.254-.054 46.881-.095 9.649-.025 9.667-15.025-.002-15z"
+                />
+                <path
+                  d="m505.932 246.439c-3.897-3.878-9.255-5.867-14.695-6.014l-5.668.028v-10.719c0-6.529-3.878-13.427-9.433-16.862v-15.098c0-31.069-48.372-30.934-48.372.146v15.1c-5.659 3.498-9.455 9.741-9.455 16.852v10.982c-24.966 1.7-25.037 39.745.028 41.232.16 33.575.152 66.6-.028 100.737-.049 9.414 14.949 9.966 15 .079.18-34.166.188-67.22.029-100.823l37.211-.185s-.048 110.848-.048 160.784c0 24.338-37.219 24.5-37.219-.253l.013-13.677c.585-9.68-14.387-10.583-14.973-.904v12.834c0 11 3.402 20.316 9.988 26.869.586 15.693 7.198 30.878 18.369 41.956 3.205 3.18 7.642 2.208 10.744-.182 11.365-11.385 17.769-26.394 18.169-42.414 4.951-4.931 9.908-9.896 9.908-26.896l.006-68.351c12.97 3.689 26.494-6.348 26.494-19.946v-90.672c0-5.523-2.155-10.709-6.068-14.603zm-72.623-5.727v-10.841c0-2.219 1.523-4.08 3.573-4.633l30.025-.149c.84.208 1.615.605 2.243 1.231.915.911 1.419 2.123 1.419 3.414v10.794zm18.671-52c4.604 0 9.155 4.514 9.155 9.062v12.166l-18.372.091v-12.111c.001-5.053 4.133-9.183 9.217-9.208zm-.011 303.901c-3.487-4.942-6.009-10.531-7.417-16.406 2.322.503 4.674.765 7.027.765 2.627 0 5.253-.326 7.839-.957-1.374 5.964-3.892 11.587-7.449 16.598zm45.031-140.899c0 7.101-11.452 7.66-11.452.131 0 0 .013-70.974.021-77.48.005-4.196-3.483-7.509-7.558-7.509l-58.389.29c-7.242 0-7.073-11.331.074-11.366l71.615-.355c3.463.295 5.359 2.168 5.688 5.617v90.672z"
+                />
+              </g>
+            </g>
+          </svg>
+        </div>
+        <div class="solu_title">
+          <h1>Message</h1>
+        </div>
+        <div class="solu_description">
+          <p>
+            Towards a vision for the future of education in the era of
+            artificial intelligence and stimulating a culture of research and
+            innovation.
+          </p>
+        </div>
+      </div>
+
+      <div class="solution_card">
+        <div class="hover_color_bubble"></div>
+        <div class="so_top_icon">
+          <svg
+            id="Layer_1"
+            enable-background="new 0 0 512 512"
+            height="50"
+            viewBox="0 0 512 512"
+            width="40"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g>
+              <g>
+                <g>
+                  <g>
+                    <path
+                      d="m47.478 452.317 295.441 19.76c5.511.369 10.277-3.8 10.645-9.31l28.393-424.517c.369-5.511-3.8-10.276-9.31-10.645l-295.441-19.76c-5.511-.369-10.276 3.8-10.645 9.31l-28.394 424.517c-.368 5.511 3.8 10.277 9.311 10.645z"
+                      fill="#fae19e"
+                    />
+                  </g>
+                  <g>
+                    <g>
+                      <g>
+                        <g>
+                          <g>
+                            <path
+                              d="m17.5 504.177h226.14l79.96-79.605v-355.86c0-5.523-4.477-10-10-10h-296.1c-5.523 0-10 4.477-10 10v425.466c0 5.522 4.477 9.999 10 9.999z"
+                              fill="#fff9e9"
+                            />
+                          </g>
+                          <path
+                            d="m313.601 58.712h-40c5.523 0 10 4.477 10 10v355.861l-.258 40.078 40.258-40.078v-355.861c0-5.523-4.477-10-10-10z"
+                            fill="#fff4d6"
+                          />
+                        </g>
+                      </g>
+                    </g>
+                    <path
+                      d="m243.64 504.177v-70.253c0-5.523 4.477-10 10-10h69.96z"
+                      fill="#ffeec2"
+                    />
+                  </g>
+                </g>
+                <g>
+                  <path
+                    d="m468.636 248.58-33.372.165v-50.826c0-9.183 7.463-16.662 16.673-16.708h.007c9.217-.046 16.693 7.371 16.693 16.562v50.807z"
+                    fill="#fed23a"
+                  />
+                  <path
+                    d="m451.96 504.177c-10.362-10.277-16.196-24.263-16.208-38.857l-.062-73.973c0-.644.524-1.169 1.171-1.173l30.038-.149c.647-.003 1.171.517 1.171 1.161l.062 74.079c.012 14.531-5.749 28.472-16.015 38.756z"
+                    fill="#54b1ff"
+                  />
+                  <path
+                    d="m451.959 469.333h-.01c-14.434.072-26.14-11.542-26.14-25.935v-213.527c0-6.778 5.477-12.283 12.255-12.316l27.626-.137c6.826-.034 12.378 5.49 12.378 12.316v213.436c0 14.38-11.687 26.091-26.109 26.163z"
+                    fill="#fdf385"
+                  />
+                  <path
+                    d="m465.69 217.417-23.769.118c6.037.79 10.708 5.94 10.708 12.198v213.437c0 9.823-5.455 18.397-13.507 22.87 3.79 2.115 8.164 3.317 12.826 3.293h.01c14.422-.072 26.109-11.783 26.109-26.163v-213.436c.001-6.826-5.551-12.351-12.377-12.317z"
+                    fill="#faee6e"
+                  />
+                  <path
+                    d="m491.274 247.925-71.615.355c-7.305.036-13.226 5.968-13.226 13.248 0 7.281 5.921 13.153 13.226 13.117l58.389-.29v77.489c0 7.281 5.921 13.153 13.226 13.117 7.305-.036 13.226-5.968 13.226-13.248v-90.672c0-7.28-5.922-13.152-13.226-13.116z"
+                    fill="#54b1ff"
+                  />
+                  <g>
+                    <path
+                      d="m491.274 247.925-38.441.188-.167 26.311 25.381-.067v77.489c0 7.281 5.921 13.153 13.226 13.117 7.305-.036 13.226-5.968 13.226-13.248v-90.672c.001-7.282-5.921-13.154-13.225-13.118z"
+                      fill="#3da7ff"
+                    />
+                  </g>
+                </g>
+              </g>
+              <g fill="#060606">
+                <path
+                  d="m373.147 20.122-295.44-19.761c-9.631-.638-17.984 6.665-18.629 16.293l-2.311 34.557h-39.267c-9.649 0-17.5 7.851-17.5 17.5v425.466c0 9.649 7.851 17.5 17.5 17.5h226.141c1.96 0 3.902-.801 5.292-2.185l34.138-33.987c.347.074.701.133 1.065.157l58.282 3.898c9.302.614 18.005-6.952 18.629-16.293l28.393-424.515c.639-9.528-6.766-17.993-16.293-18.63zm-122.006 465.902v-52.1c0-1.378 1.122-2.5 2.5-2.5h51.9zm94.939-23.757c-.244 1.51-1.131 2.286-2.66 2.327l-46.28-3.096 31.752-31.611c1.414-1.407 2.209-3.32 2.209-5.315v-355.86c0-9.649-7.851-17.5-17.5-17.5h-77.993c-9.697 0-9.697 15 0 15h77.993c1.379 0 2.5 1.122 2.5 2.5v347.712h-62.46c-9.649 0-17.5 7.851-17.5 17.5v62.753h-218.641c-1.378 0-2.5-1.122-2.5-2.5v-425.465c0-1.378 1.122-2.5 2.5-2.5h178.168c9.697 0 9.697-15 0-15h-123.868l2.244-33.556c.244-1.511 1.131-2.286 2.661-2.327l295.44 19.76c1.511.244 2.287 1.131 2.328 2.661z"
+                />
+                <path
+                  d="m267.827 237.047h-204.553c-4.142 0-7.5 3.358-7.5 7.5s3.358 7.5 7.5 7.5h204.553c4.143 0 7.5-3.358 7.5-7.5s-3.357-7.5-7.5-7.5z"
+                />
+                <path
+                  d="m267.827 289.332h-204.553c-4.142 0-7.5 3.358-7.5 7.5s3.358 7.5 7.5 7.5h204.553c4.143 0 7.5-3.358 7.5-7.5s-3.357-7.5-7.5-7.5z"
+                />
+                <path
+                  d="m55.774 192.262c0 4.142 3.358 7.5 7.5 7.5h204.553c4.143 0 7.5-3.358 7.5-7.5s-3.357-7.5-7.5-7.5h-204.553c-4.142 0-7.5 3.358-7.5 7.5z"
+                />
+                <path
+                  d="m91.807 139.977c0 4.142 3.358 7.5 7.5 7.5h132.487c4.142 0 7.5-3.358 7.5-7.5s-3.358-7.5-7.5-7.5h-132.487c-4.142 0-7.5 3.358-7.5 7.5z"
+                />
+                <path
+                  d="m194.755 438.787c-13.489.036-26.978.065-40.467.086-4.534.007-9.067.013-13.6.016-8.215.006-13.75-1.643-15.59-10.679-1.556-7.64-12.364-6.613-14.464 0-5.19 16.337-13.774 9.936-18.582-1.053-4.797-10.963-6.027-23.233-8.122-34.9-1.54-8.573-14.506-6.17-14.732 1.994-.298 10.751-1.302 21.331-4.031 31.758-2.815 10.758-7.034 21.097-11.222 31.376-3.651 8.961 10.867 12.816 14.464 3.988 3.711-9.108 7.427-18.266 10.193-27.714 5.14 12.36 15.774 26.34 30.927 18.101 2.819-1.533 5.452-3.712 7.763-6.253 7.88 9.106 19.609 8.388 30.584 8.375 15.627-.02 31.254-.054 46.881-.095 9.649-.025 9.667-15.025-.002-15z"
+                />
+                <path
+                  d="m505.932 246.439c-3.897-3.878-9.255-5.867-14.695-6.014l-5.668.028v-10.719c0-6.529-3.878-13.427-9.433-16.862v-15.098c0-31.069-48.372-30.934-48.372.146v15.1c-5.659 3.498-9.455 9.741-9.455 16.852v10.982c-24.966 1.7-25.037 39.745.028 41.232.16 33.575.152 66.6-.028 100.737-.049 9.414 14.949 9.966 15 .079.18-34.166.188-67.22.029-100.823l37.211-.185s-.048 110.848-.048 160.784c0 24.338-37.219 24.5-37.219-.253l.013-13.677c.585-9.68-14.387-10.583-14.973-.904v12.834c0 11 3.402 20.316 9.988 26.869.586 15.693 7.198 30.878 18.369 41.956 3.205 3.18 7.642 2.208 10.744-.182 11.365-11.385 17.769-26.394 18.169-42.414 4.951-4.931 9.908-9.896 9.908-26.896l.006-68.351c12.97 3.689 26.494-6.348 26.494-19.946v-90.672c0-5.523-2.155-10.709-6.068-14.603zm-72.623-5.727v-10.841c0-2.219 1.523-4.08 3.573-4.633l30.025-.149c.84.208 1.615.605 2.243 1.231.915.911 1.419 2.123 1.419 3.414v10.794zm18.671-52c4.604 0 9.155 4.514 9.155 9.062v12.166l-18.372.091v-12.111c.001-5.053 4.133-9.183 9.217-9.208zm-.011 303.901c-3.487-4.942-6.009-10.531-7.417-16.406 2.322.503 4.674.765 7.027.765 2.627 0 5.253-.326 7.839-.957-1.374 5.964-3.892 11.587-7.449 16.598zm45.031-140.899c0 7.101-11.452 7.66-11.452.131 0 0 .013-70.974.021-77.48.005-4.196-3.483-7.509-7.558-7.509l-58.389.29c-7.242 0-7.073-11.331.074-11.366l71.615-.355c3.463.295 5.359 2.168 5.688 5.617v90.672z"
+                />
+              </g>
+            </g>
+          </svg>
+        </div>
+        <div class="solu_title">
+          <h1>Conference Objectives</h1>
+        </div>
+        <div class="solu_description">
+          <ol>
+            <li>
+              Building forward-looking scenarios for the future of education in
+              the era of artificial intelligence.
+            </li>
+            <li>
+              Presenting recent studies and innovations in the field of
+              artificial intelligence and education.
+            </li>
+            <li>
+              Explaining the positive and negative effects of artificial
+              intelligence on the elements of the educational process.
+            </li>
+            <li>
+              Creating a scientific platform and a research vessel for knowledge
+              sharing, exchanging experiences and developing skills on employing
+              the latest artificial intelligence technologies in education.
+            </li>
+            <li>
+              Reviewing international experiences in employing artificial
+              intelligence in education and the possibility of benefiting from
+              them.
+            </li>
+            <li>
+              Exchanging different experiences and expertise in the conference
+              sessions.
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <br /><br /><br /><br /><br />
+
+    <h1>Conference stages</h1>
+    <br /><br /><br /><br /><br />
+
+    <ul>
+      <li style="--accent-color: #c49083">
+        <div class="date">15 - 11 - 2024</div>
+        <div class="title">The first stage</div>
+        <div class="descr">
+          Receiving scientific abstracts. The last date for receiving scientific
+          abstracts is 15/11/2024 .
+        </div>
+      </li>
+      <li style="--accent-color: #3d66b6">
+        <div class="date">30 - 11 - 2024</div>
+        <div class="title">The second stage</div>
+        <div class="descr">Reply to scientific summaries on 30-11-2024 .</div>
+      </li>
+      <li style="--accent-color: #c49083">
+        <div class="date">30 - 02 - 2025</div>
+        <div class="title">The third stage</div>
+        <div class="descr">
+          The last date for receiving scientific research is 30-02-2025 .
+        </div>
+      </li>
+      <li style="--accent-color: #3d66b6">
+        <div class="date">15 - 03 - 2025</div>
+        <div class="title">Fourth stage</div>
+        <div class="descr">
+          Final acceptance of research and notification of researchers on
+          15/03/2025 .
+        </div>
+      </li>
+      <li style="--accent-color: #c49083">
+        <div class="date">01 - 04 - 2025</div>
+        <div class="title">The fifth stage</div>
+        <div class="descr">
+          Submitting the accepted research papers’ presentations no later than
+          01-04-2025.
+        </div>
+      </li>
+      <li style="--accent-color: #3d66b6">
+        <div class="date">15-17 - 04 - 2025</div>
+        <div class="title">Sixth stage</div>
+        <div class="descr">Proposed conference date: 15-17 April 2025.</div>
+      </li>
+    </ul>
+
+    <h1>Conference topics</h1>
+    <section id="gallery" class="swiper-container">
+      <div class="swiper-wrapper">
+        <!-- Card 1 -->
+        <div class="swiper-slide">
+          <div class="card">
+            <img
+              src="assat/imega/0db10d79db_upscayl_4x_remacri.png"
+              class="card-img-top"
+              alt="Sunset 1"
+            />
+            <div class="card-body">
+              <h5 class="card-title">
+                Successful international experiences in employing artificial
+                intelligence in education
+              </h5>
+              <p class="card-text">
+                By presenting successful international experiences and practices
+                in employing artificial intelligence in education, benefiting
+                from them in developing education in the Kingdom of Saudi
+                Arabia.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="swiper-slide">
+          <div class="card">
+            <img
+              src="assat/imega/1dcd3a5268_upscayl_4x_remacri.png"
+              class="card-img-top"
+              alt="Sunset 2"
+            />
+            <div class="card-body">
+              <h5 class="card-title">
+                Employing artificial intelligence technologies in education
+              </h5>
+              <p class="card-text">
+                Their uses enhance teaching and learning experiences, such as
+                machine learning, language processing, data analysis, and the
+                use of educational chatbots.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="swiper-slide">
+          <div class="card">
+            <img
+              src="assat/imega/2ed43dc0c2_upscayl_4x_remacri.png"
+              class="card-img-top"
+              alt="Sunset 3"
+            />
+            <div class="card-body">
+              <h5 class="card-title">
+                Policies and ethics of artificial intelligence in education
+              </h5>
+              <p class="card-text">
+                This regulates the employment of artificial intelligence in
+                education, ensuring the preservation of ethical considerations
+                such as data privacy, algorithmic bias, transparency,
+                accountability, and societal impacts.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="swiper-slide">
+          <div class="card">
+            <img
+              src="assat/imega/4e6c75d5e2_upscayl_4x_ultrasharp.png"
+              class="card-img-top"
+              alt="Sunset 4"
+            />
+            <div class="card-body">
+              <h5 class="card-title">
+                Preparing and professionally developing the teacher of the age
+                of artificial intelligence
+              </h5>
+              <p class="card-text">
+                Employing AI technologies in building curricula, teaching
+                strategies, tests, assessment methods, and self-learning
+                motivation, while building teacher training programs based on
+                current and future needs.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="swiper-slide">
+          <div class="card">
+            <img
+              src="assat/imega/33ce098842_upscayl_4x_ultrasharp.png"
+              class="card-img-top"
+              alt="Sunset 5"
+            />
+            <div class="card-body">
+              <h5 class="card-title">
+                Educational management, leadership, and ensuring quality of
+                education in the age of artificial intelligence
+              </h5>
+              <p class="card-text">
+                Activating AI in building strategic orientations, operational
+                plans, performance indicators, governance, decision-making, and
+                enhancing educational institution efficiency.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="swiper-slide">
+          <div class="card">
+            <img
+              src="assat/imega/651f1fefd1_upscayl_4x_ultrasharp.png"
+              class="card-img-top"
+              alt="Sunset 6"
+            />
+            <div class="card-body">
+              <h5 class="card-title">
+                Curricula and teaching methods in the age of artificial
+                intelligence
+              </h5>
+              <p class="card-text">
+                Planning for teaching, high-quality curricula, assessment tools,
+                correcting tests, and using AI in educating diverse student
+                groups (high achievers, disabled, children), improving
+                efficiency and addressing educational loss.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 7 -->
+        <div class="swiper-slide">
+          <div class="card">
+            <img
+              src="assat/imega/dd05aa895a_upscayl_4x_ultrasharp.png"
+              class="card-img-top"
+              alt="Sunset 7"
+            />
+            <div class="card-body">
+              <h5 class="card-title">
+                Learning Psychology in the Age of Artificial Intelligence
+              </h5>
+              <p class="card-text">
+                Addressing psychological and social problems faced by students,
+                providing solutions that help understand the human mind, and
+                using AI to analyze students’ behavior and predict future
+                actions.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 8 -->
+        <div class="swiper-slide">
+          <div class="card">
+            <img
+              src="assat/imega/image-168525-digital-technological-growth-development-urban-progress-preview-transformed_upscayl_4x_ultrasharp.png"
+              class="card-img-top"
+              alt="Sunset 8"
+            />
+            <div class="card-body">
+              <h5 class="card-title">
+                Early childhood and artificial intelligence
+              </h5>
+              <p class="card-text">
+                Using AI to foster collaboration between children and computers,
+                enhancing their knowledge and creativity, preparing them for a
+                digital future, and improving problem-solving skills.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Add Navigation Arrows -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </section>
+
+    <!-- Section 6: Advertisement Reservation -->
+    <div class="section-6">
+      <h2>Reserve Your Ad Space</h2>
+      <div class="ad-reservation">
+        <p>
+          Click here to reserve this space for advertising during the conference
+        </p>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-content">
+        <p>
+          UHB | Email: <a href="mailto:eduai@uhb.edu.sa">eduai@uhb.edu.sa</a> |
+          Contact Number: <a href="tel:+996546158806">+996546158806</a>
+        </p>
+      </div>
+    </footer>
+
+    <!-- JavaScript for Language Toggle -->
+    <script>
+      function toggleLanguage() {
+        const lang = document.documentElement.lang === "en" ? "ar" : "en";
+        document.documentElement.lang = lang;
+
+        // Update text content for language
+        if (lang === "ar") {
+          document.getElementById("nav-main").innerText = "الرئيسية";
+          document.getElementById("nav-about").innerText = "عن المؤتمر";
+          document.getElementById("nav-goals").innerText = "أهداف المؤتمر";
+          document.getElementById("nav-axes").innerText = "المحاور";
+          document.getElementById("nav-contact").innerText = "التواصل";
+
+          // Rearrange the navbar items for Arabic (right to left)
+          reorderNavbarItems("rtl");
+        } else {
+          document.getElementById("nav-main").innerText = "Main";
+          document.getElementById("nav-about").innerText =
+            "About the Conference";
+          document.getElementById("nav-goals").innerText = "Conference Goals";
+          document.getElementById("nav-axes").innerText = "Axes";
+          document.getElementById("nav-contact").innerText = "Communication";
+
+          // Rearrange the navbar items for English (left to right)
+          reorderNavbarItems("ltr");
+        }
+      }
+
+      function countdownTimer() {
+        const endDate = new Date("Apr 15, 2025 00:00:00").getTime(); // Target date
+
+        const timerInterval = setInterval(function () {
+          const now = new Date().getTime();
+          const nowDate = new Date();
+          const distance = endDate - now;
+
+          // Calculate months remaining
+          const endDateObj = new Date(endDate);
+          let months = (endDateObj.getFullYear() - nowDate.getFullYear()) * 12;
+          months += endDateObj.getMonth() - nowDate.getMonth();
+
+          // Get remaining days in the current month
+          const startOfNextMonth = new Date(
+            nowDate.getFullYear(),
+            nowDate.getMonth() + 1,
+            1
+          );
+          const daysUntilEndOfMonth = Math.floor(
+            (startOfNextMonth.getTime() - nowDate.getTime()) /
+              (1000 * 60 * 60 * 24)
+          );
+
+          // Limit days to a maximum of 30
+          const days = Math.min(daysUntilEndOfMonth, 30);
+
+          const hours = Math.floor(
+            (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+          );
+          const minutes = Math.floor(
+            (distance % (1000 * 60 * 60)) / (1000 * 60)
+          );
+          const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+          // Update the HTML
+          document.getElementById("days").innerHTML = days
+            .toString()
+            .padStart(2, "0");
+          document.getElementById("hours").innerHTML = hours
+            .toString()
+            .padStart(2, "0");
+          document.getElementById("minutes").innerHTML = minutes
+            .toString()
+            .padStart(2, "0");
+          document.getElementById("seconds").innerHTML = seconds
+            .toString()
+            .padStart(2, "0");
+
+          // Optional: Display the months
+          document.getElementById("months").innerHTML = months
+            .toString()
+            .padStart(2, "0");
+
+          // Check if countdown has finished
+          if (distance < 0) {
+            clearInterval(timerInterval);
+            document.getElementById("countdown").innerHTML = "EXPIRED";
+          }
+        }, 1000);
+      }
+
+      countdownTimer();
+
+      var swiper = new Swiper(".swiper-container", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+        },
+      });
+
+      // Function to open the popup
+      function openPopup() {
+        document.getElementById("contactModal").style.display = "block";
+      }
+
+      // Function to close the popup
+      function closePopup() {
+        document.getElementById("contactModal").style.display = "none";
+      }
+
+      // Close the modal if the user clicks outside the modal content
+      window.onclick = function (event) {
+        var modal = document.getElementById("contactModal");
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
+
+      // Optional: You can add form validation or submission handling here.
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          // You can handle form submission here (send an email, etc.)
+          alert("تم إرسال مشكلتك بنجاح!");
+          closePopup(); // Close the modal after submission
+        });
+    </script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  </body>
+</html>
