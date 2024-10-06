@@ -281,7 +281,6 @@
       ul li .date::before {
         content: "";
         width: var(--inlineP);
-        aspect-ratio: 1;
         background: var(--accent-color);
         background-image: linear-gradient(rgba(0, 0, 0, 0.2) 100%, transparent);
         position: absolute;
@@ -557,7 +556,8 @@
       .swiper-container {
         width: 100%;
         max-width: 1200px;
-        margin: 0 auto;
+        margin: left 5%;
+
         padding-top: 50px;
         position: relative;
       }
@@ -725,6 +725,19 @@
           width: 80%;
         }
       }
+
+      .university-info p {
+        font-size: 18px;
+        margin-left: 10px;
+      }
+
+      .university-logo {
+        width: 350px; /* عرض شعار الجامعة */
+        height: auto;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
     </style>
   </head>
   <body>
@@ -736,10 +749,10 @@
     <div class="navbar" id="navbar">
       <a href="index-E.html" id="nav-main">EN</a>
       <a href="#" id="nav-main" onclick="openPopup()">التواصل </a>
-      <a href="#" id="nav-about">محاور المؤتمر </a>
-      <a href="#" id="nav-goals">مراحل المؤتمر</a>
-      <a href="#" id="nav-axes">عن المؤتمر</a>
-      <a href="#" id="nav-contact">الرئيسية</a>
+      <a href="#gallery" id="nav-about">محاور المؤتمر </a>
+      <a href="#solution_card" id="stahge">مراحل المؤتمر</a>
+      <a href="#read-more" id="section-title">عن المؤتمر</a>
+      <a href="#navbar" id="navbar">الرئيسية</a>
     </div>
 
     <!-- Popup Modal -->
@@ -940,7 +953,7 @@
           </svg>
         </div>
         <div class="solu_title">
-          <h1>الإهـــداف</h1>
+          <h1>الأهـــداف</h1>
         </div>
         <div class="solu_description">
           <ol>
@@ -971,7 +984,7 @@
           </ol>
         </div>
       </div>
-
+      <br id="solution_card" />
       <div class="solution_card">
         <div class="hover_color_bubble"></div>
         <div class="so_top_icon">
@@ -1181,7 +1194,7 @@
           </svg>
         </div>
         <div class="solu_title">
-          <h1>الـــــروئــــيـــــة</h1>
+          <h1>الـــــرؤيـــــة</h1>
         </div>
         <div class="solu_description">
           <p>
@@ -1201,9 +1214,7 @@
       <li style="--accent-color: #c49083">
         <div class="date">15/11/2024</div>
         <h2 class="title">المرحلة الاولى</h2>
-        <div class="descr">
-          استقبال الملخصات العلمية وآخر موعد لاستقبال الملخصات العلمية
-        </div>
+        <div class="descr">آخر موعد لاستقبال الملخصات العلمية</div>
       </li>
       <li style="--accent-color: #3d66b6">
         <div class="date">30-11-2024</div>
@@ -1231,7 +1242,7 @@
         <div class="descr">موعد المؤتمر</div>
       </li>
     </ul>
-
+    <br id="solution_card" />
     <h1>مـــحـــاور الــمــؤتــمــر</h1>
     <section id="gallery" class="swiper-container">
       <div class="swiper-wrapper">
@@ -1426,41 +1437,22 @@
     <footer>
       <div class="footer-content">
         <p>
-          UHB | بريد إلكتروني : <a href="tel:+1234567890">+996546158806</a> |
-          رقم التواصل : <a href="mailto:info@example.com">eduai@uhb.edu.sa</a>
+          UHB | بريد إلكتروني : <a href="tel:+1234567890">9960137206793+</a> |
+          رقم التواصل : <a href="mailto:eduai@uhb.edu.sa">eduai@uhb.edu.sa</a>
         </p>
+      </div>
+
+      <div class="university-info">
+        <img
+          src="assat/imega/Picture2.png"
+          alt="شعار الجامعة"
+          class="university-logo"
+        />
       </div>
     </footer>
 
     <!-- JavaScript for Language Toggle -->
     <script>
-      function toggleLanguage() {
-        const lang = document.documentElement.lang === "en" ? "ar" : "en";
-        document.documentElement.lang = lang;
-
-        // Update text content for language
-        if (lang === "ar") {
-          document.getElementById("nav-main").innerText = "الرئيسية";
-          document.getElementById("nav-about").innerText = "عن المؤتمر";
-          document.getElementById("nav-goals").innerText = "أهداف المؤتمر";
-          document.getElementById("nav-axes").innerText = "المحاور";
-          document.getElementById("nav-contact").innerText = "التواصل";
-
-          // Rearrange the navbar items for Arabic (right to left)
-          reorderNavbarItems("rtl");
-        } else {
-          document.getElementById("nav-main").innerText = "Main";
-          document.getElementById("nav-about").innerText =
-            "About the Conference";
-          document.getElementById("nav-goals").innerText = "Conference Goals";
-          document.getElementById("nav-axes").innerText = "Axes";
-          document.getElementById("nav-contact").innerText = "Communication";
-
-          // Rearrange the navbar items for English (left to right)
-          reorderNavbarItems("ltr");
-        }
-      }
-
       function countdownTimer() {
         const endDate = new Date("Apr 15, 2025 00:00:00").getTime(); // Target date
 
