@@ -665,7 +665,7 @@
       .swiper-container {
         width: 100%;
         max-width: 1200px;
-        margin: 0 auto;
+        margin: left 5%;
         padding-top: 50px;
         position: relative;
       }
@@ -705,6 +705,7 @@
         align-items: center;
         text-align: center;
       }
+
       * {
         box-sizing: border-box;
       }
@@ -833,6 +834,34 @@
           width: 80%;
         }
       }
+
+      
+      footer {
+        background-color: rgba(255, 255, 255, 0.1); /* خلفية شفافة جزئيًا */
+        border-radius: 15px; /* زوايا منحنية */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* إضافة ظل خفيف */
+        padding: 20px;
+        transition: 0.3s;
+        color: white; /* White text color */
+        text-align: center; /* Align text to the right */
+        padding: 20px 0; /* Padding for top and bottom */
+        font-size: 24px; /* Adjust font size */
+      }
+
+      footer a {
+        color: #ffffff; /* White color for links */
+        text-decoration: none; /* Remove underline from links */
+      }
+
+      footer a:hover {
+        text-decoration: underline; /* Underline links on hover */
+      }
+
+      .footer-content p {
+        margin: 0; /* Remove margins to keep everything in one line */
+        white-space: nowrap; /* Ensure the text stays on one line */
+      }
+
     </style>
   </head>
   <body>
@@ -843,9 +872,9 @@
 
     <div class="navbar" id="navbar">
       <a href="#" id="nav-main">Main</a>
-      <a href="#" id="nav-about">About the Conference</a>
-      <a href="#" id="nav-goals">Conference Goals</a>
-      <a href="#" id="nav-axes">Axes</a>
+      <a href="#section-text" id="nav-about">About the Conference</a>
+      <a href="#section35" id="nav-goals">Conference Stages</a>
+      <a href="#gallery" id="nav-axes">Conference Topics</a>
       <a href="#" id="nav-main" onclick="openPopup()">Communication</a>
       <a href="index.html" id="nav-contact">AR</a>
     </div>
@@ -1275,7 +1304,7 @@
           </svg>
         </div>
         <div class="solu_title">
-          <h1>Conference Objectives</h1>
+          <h1 id="section35">Conference Objectives</h1>
         </div>
         <div class="solu_description">
           <ol>
@@ -1557,9 +1586,17 @@
     <footer>
       <div class="footer-content">
         <p>
-          UHB | Email: <a href="mailto:eduai@uhb.edu.sa">eduai@uhb.edu.sa</a> |
-          Contact Number: <a href="tel:+996546158806">+996546158806</a>
+          PHONE NUMBER: <a href="tel:+1234567890">+9960137206793</a> |
+          UHB | EMILE: <a href="mailto:eduai@uhb.edu.sa">eduai@uhb.edu.sa</a>
         </p>
+      </div>
+   
+      <div class="university-info">
+        <img
+          src="assat/imega/Picture2.png"
+          alt="شعار الجامعة"
+          class="university-logo"
+        />
       </div>
     </footer>
 
